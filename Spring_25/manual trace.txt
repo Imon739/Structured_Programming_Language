@@ -1,0 +1,58 @@
+1.a)
+	Inside First IF
+	a = -2 and b = -1
+	Inside Second IF
+
+b)
+if (a * b == 0) {
+    a = b + 2;
+    b = a--;
+    printf("a = %d and b = %d\n", a, b);
+}
+else if (a * b == 1) {
+    printf("a = %d and b = %d\n", a, b);
+}
+else if (a * b == 2) {
+    a = b + 2;
+    b = a--;
+}
+else if (a * b == 3 || a * b == 4) {
+    // just break, do nothing
+}
+else {
+    printf("Inside default\n");
+}
+
+
+2.a)
+	8 1 0
+	3 1 1
+	6 2 1
+	9 2 2
+
+
+          ┌───────────────┐
+          │     Start          │
+          └───────┬───────┘
+                  │
+        ┌─────────▼─────────┐
+        │ Set timer = 10    │
+        └─────────┬─────────┘
+                  │
+        ┌─────────▼─────────┐
+        │ Is timer > 0 ?    │
+        └───┬─────────┬─────┘
+            │Yes       │No
+            ▼          ▼
+   ┌──────────────┐   ┌────────────────┐
+   │ Print timer      │ 		  Print          │
+   │ (countdown)      │   │   "Blasting Off!"   │
+   └──────┬───────┘   └───────┬────────┘
+          │                   │
+   ┌──────▼───────┐           │
+   │ timer =      │           │
+   │ timer - 1    │           │
+   └──────┬───────┘           │
+          │                   │
+          └───────────►───────┘
+                  (Loop back)
